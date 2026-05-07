@@ -1,0 +1,527 @@
+<!DOCTYPE html> 
+<html lang="en-US">
+<html>
+<head> 
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SBXGLGZKE"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+	  gtag('config', 'G-4SBXGLGZKE');
+	</script> 
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+ :root {
+    --accent: #1D4ED8;
+    --accent-light: #EFF6FF;
+    --accent2: #0F6E56;
+    --accent2-light: #E1F5EE;
+    --ink3: #9C9890;
+    --surface: #FFFFFF;
+    --surface2: #F0EDE6;
+    --gold-light: #FAEEDA;
+    --border: rgba(26,24,20,0.1);
+    --serif: 'DM Serif Display', serif; 
+    --sans: 'DM Sans', sans-serif;
+  }
+/* FEATURES */
+  .features-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
+  .feature-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 16px; padding: 28px 24px; }
+  .feature-icon { width: 36px; height: 36px; border-radius: 10px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .feature-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 8px; color: var(--ink); }
+  .feature-card p { font-size: 14px; color: var(--ink2); line-height: 1.6; margin: 0; max-width: none; }
+/* USERS */
+  .users-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 32px; }
+  .user-card { padding: 20px; border: 0.5px solid var(--border); border-radius: 12px; background: var(--surface); }
+  .user-role { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+  .user-need { font-size: 13px; color: var(--ink2); line-height: 1.5; } 
+/* ARCH FLOW */
+  .arch-flow {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 16px;
+  }
+
+  .arch-box {
+    border-radius: 14px;
+    padding: 16px;
+    border: 0.5px solid var(--border);
+    position: relative; 
+    min-height: unset;
+  }
+  .arch-box.source { background: var(--surface2); border-color: rgba(26,24,20,0.15); }
+  .arch-box.process { background: var(--surface); border-color: rgba(26,24,20,0.12); }
+  .arch-box.ai { background: var(--accent-light); border-color: #BFDBFE; }
+  .arch-box.output { background: var(--accent2-light); border-color: #9FE1CB; }
+
+  .arch-step-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+  .source .arch-step-label { background: rgba(26,24,20,0.07); color: var(--ink3); }
+  .process .arch-step-label { background: var(--surface2); color: var(--ink3); }
+  .ai .arch-step-label { background: #BFDBFE; color: var(--accent); }
+  .output .arch-step-label { background: #9FE1CB; color: var(--accent2); }
+
+  .arch-nickname {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .arch-name {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .arch-desc {
+    font-size: 11px;
+    color: var(--ink2);
+    line-height: 1.4;
+  }
+
+  .arch-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 0 8px;
+  }
+  .arch-connector-line {
+    width: 32px;
+    height: 1px;
+    background: var(--border);
+  }
+  .arch-connector-arrow {
+    font-size: 14px;
+    color: var(--ink3);
+    line-height: 1;
+  }
+  .arch-connector-label {
+    font-size: 9px;
+    color: var(--ink3);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  /* CALLOUT */
+  .systems-callout {
+    margin-top: 36px;
+    padding: 24px 28px;
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
+    max-width: 720px;
+  }
+  .callout-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .callout-text h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+  .callout-text p {
+    font-size: 13px;
+    color: var(--ink2);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 700px) {
+    body { padding: 40px 24px; }
+    .arch-flow { grid-template-columns: 1fr; }
+    .arch-connector { flex-direction: row; padding: 8px 0; }
+    .arch-connector-line { width: 1px; height: 24px; }
+  } 
+
+  .before-block { margin-top: 40px; }
+  .before-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .before-label::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #EF4444; }
+  .browser-frame { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.08); max-width: 780px; }
+  .browser-chrome { background: #F1F3F4; padding: 10px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--border); }
+  .browser-dots { display: flex; gap: 6px; }
+  .browser-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background: #FF5F57; }
+  .dot-yellow { background: #FFBD2E; }
+  .dot-green { background: #28C840; }
+  .browser-url { flex: 1; background: #fff; border-radius: 6px; padding: 4px 12px; font-size: 11px; color: var(--ink3); border: 1px solid var(--border); margin: 0 12px; }
+  .browser-body img { width: 100%; display: block; }
+
+.demo-block { margin-top: 40px; margin-bottom: 40px; }
+  .demo-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .demo-label::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #28C840; }
+  .demo-browser { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 8px 40px rgba(0,0,0,0.12); }
+  .demo-browser .browser-chrome { background: #2A2A2A; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .demo-browser .browser-url { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }
+  .before-caption, .demo-caption { margin-top: 12px; font-size: 13px; color: var(--ink3); max-width: 680px; line-height: 1.5; font-style: italic; }
+</style>
+<title>Model Citizens ❘ Sarai Gonzalez</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=false;">
+<meta name="googlebot" content="noindex"> 
+<meta name="robots" content="noindex"> 
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-io/apple-touch-icon.png"> 
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-io/favicon-16x16.png">
+<link rel="manifest" href="/favicon-io/site.webmanifest"> 
+<!-- Latest CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery file。bootstrap.min.js -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Latest JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Scripts -->
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css" />
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/fonts.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/zoom.css" rel="stylesheet">
+    <script src="assets/js/transition.js"></script>
+    <script src="assets/js/zoom.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://use.fontawesome.com/a891bb0a11.js"></script>
+    <script src="assets/js/script.js" charset="utf-8"></script>
+</head>
+  <body>
+    <div class="spinner-wrapper">
+      <div class="p-center-wrapper">
+        <div class="la-line-scale la-dark">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div> 
+	    <div></div>
+            <h4 id="preloader-title"></h4>
+            <h5 id="preloader-content"></h5>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsible-nav">
+          <span class="sr-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Sarai Gonzalez</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
+        <ul class="nav navbar-nav">
+          <li><a class="selected hvr-underline-from-left" href="index.html#my-work">Projects</a></li>
+          <li><a class="hvr-underline-from-left" href="https://drive.google.com/file/d/1zfu_kYayNMbLoBsyld5feaFiOlhlU-mM/view?usp=sharing" target="_blank">CV</a></li>
+          <li><a class="hvr-underline-from-left" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav> 
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 50px">
+        <nav class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+          <div class="bs-docs-sidebar">
+            <ul class="nav nav-stacked"id="sidebar">
+              <li>
+                <a href="#overview">Overview</a>
+                <ul class="nav nav-stacked">
+                  <li><a href="#problem">The Problem</a></li>
+                  <li><a href="#solution">The Solution</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#what-built">What We Built</a>
+              </li>
+
+              <li>
+                <a href="#who-helps">Who It Helps</a>
+              </li> 
+
+	      <li>
+                <a href="#architecture">Architecture</a>
+		<ul class="nav nav-stacked">
+                  <li><a href="#data-source">Data Sources & Integrity</a></li>
+                </ul>
+              </li> 
+              <li> 
+                <a href="#what-i-learned">Lessons Learned</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="col-lg-7 col-md-7 col-sm-10 col-xs-12 col-centered main-content">
+          <section id="overview" class="group first-section" data-aos="fade-up" data-aos-duration="600"> 
+	<img class="img-responsive full-img" src="" alt="final GIF mockup">
+            <h3>Overview</h3> 
+	    <hr> 
+	<div class="row">
+            <div class="subgroup"> 
+		<h5 class="citizens-h5">A tool to track civic promises over time. 3-months worth of data. Every voice heard.</h5>
+		<p>San Diego publishes open city data, but most of it sits in formats that require technical skills to navigate. It's information residents need to see how their city is working for them. In March 2026, I joined 60 builders at the inaugural Claude Impact Lab to change that. In 8 hours, we built a civic intelligence dashboard that transforms months of bureaucratic records into plain-English themes, sentiment-coded visualizations, and an AI chat interface any resident can use.</p> 
+	<div class="subgroup">
+            <h4 id="problem">The Problem</h4>
+              <p>Every week, hundreds of San Diego residents speak at City Council. Voters show up but their voices get lost in the archives. Their words get filed away into meeting minutes — technically public, practically buried. Answering something as simple as "Is housing discussed more or less than last year?" requires a five-step research odyssey.</p> 
+	</div>
+            <div class="row">
+              <div  class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                  <h4 id="solution">The Solution</h4>
+                  <p>Model Citizens ingests three months of City Council meeting minutes, strips the bureaucratic language, and makes them searchable by anyone — no research degree required. The impact: time-to-insight for public spending and housing trends dropped from 45 minutes to 30 seconds.</p>
+              </div>
+              <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12"> 
+		<h4>Role</h4> 
+		<p>UX/UI Designer</p> 
+		<h4>Duration</h4>
+                <p>8 hours</p> 
+                <h4>Links</h4>
+                <p><a href="https://musical-buttercream-df352e.netlify.app/">View Live Demo</a></p>
+                <h4>Tools</h4>
+                <p>Claude AI, Netlify</p>
+		<br>
+                <br>
+              </div> 
+            </div> 
+	</section>
+ 	<div class="section-divider">
+            <div class="dot1">
+            </div>
+            <div class="dot2">
+            </div>
+            <div class="dot3">
+            </div>
+          </div>
+
+          <section id="what-built" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>What We Built</h3>
+              <hr> 
+	      <div class="subgroup">
+                <h5 class="citizens-h5">One page. Every voice. All the patterns.</h5> 
+                  <p>Our dashboard ingests three months of San Diego City Council meeting minutes—every public comment between December 2025 and March 2026—strips out the bureaucratic language, finds the patterns, and makes them visible. The result: a single page that turns months of civic participation into one clear, ranked answer — <strong>what are San Diego residents most passionate about right now?</strong></p> 
+		<div class="demo-block">
+    <div class="browser-frame demo-browser">
+      <div class="browser-chrome">
+        <div class="browser-dots">
+          <div class="browser-dot dot-red"></div>
+          <div class="browser-dot dot-yellow"></div>
+          <div class="browser-dot dot-green"></div>
+        </div>
+        <div class="browser-url">musical-buttercream-df352e.netlify.app</div>
+      </div>
+      <div class="browser-body">
+        <img src="images/model-citizens-demo.gif" alt="Model Citizens dashboard demo — searching for top voter issues" />
+      </div>
+    </div>
+    <p class="img-caption">Clicking "What's the top issue?" — the dashboard instantly surfaces a summary from months of meeting data.</p>
+  </div> 
+			<div class="features-grid">
+    				<div class="feature-card">
+      					<div class="feature-icon" style="background:var(--accent-light);">💬</div>
+      					<h3>Chat assistant</h3>
+      					<p>Just ask: "What did residents say about housing?" and get a plain-English answer instantly.</p>
+    				</div>
+    				<div class="feature-card">
+      					<div class="feature-icon" style="background:var(--accent2-light);">📊</div>
+     					<h3>Theme rankings</h3>
+      					<p>Public comments are automatically grouped into themes, ranked from the issue drawing the most attention down to the least.</p>
+    				</div>
+    				<div class="feature-card">
+      					<div class="feature-icon" style="background:var(--gold-light);">🎨</div>
+      					<h3>Sentiment tags</h3>
+      					<p>Each theme is color-coded by sentiment so decision-makers get a read on the room not just a count of voices.</p>
+    				</div>
+    				<div class="feature-card">
+      					<div class="feature-icon" style="background:#FEF3C7;">📣</div>
+      					<h3>Real quotes</h3>
+      					<p>Surface actual quotes from actual speakers, not summaries. The human voice stays in the data.</p>
+    				</div>
+  			</div> 
+              </div>  
+            </section>
+            <div class="section-divider">
+              <div class="dot1">
+              </div>
+              <div class="dot2">
+              </div>
+              <div class="dot3">
+              </div>
+            </div>
+            <section id="who-helps" class="group" data-aos="fade-up" data-aos-duration="600">
+              <h3>Who It Helps</h3>
+              <hr> 
+	      <div class="subgroup">
+              	<h5 class="citizens-h5">Designed for Every Kind of Civic Participant</h5> 
+                 	<p>Public information shouldn't require a research degree. One data stream can power multiple user experiences. I mapped 3 user types during the sprint, each with a different information need but the same core frustration. The mission was to give everyone the equal voice they deserve in our democracy by making civic engagement accessible, efficient, and effective.</p>
+			<div class="users-grid">
+    				<div class="user-card"><p class="user-role">Residents</p><p class="user-need">I want to see what my council actually spent time on this month so I can show up to the next meeting informed.</p></div>
+    				<div class="user-card"><p class="user-role">Journalists</p><p class="user-need">I want to track shifting housing votes at a glance so I can file before the news cycle moves on.</p></div>
+    				<div class="user-card"><p class="user-role">Advocates & Nonprofits</p><p class="user-need">I want to know if climate is trending up or down on the agenda so I can decide where to focus our next campaign.</p></div>
+  			</div>
+              </div>
+             
+         
+            </section>
+          
+
+            <div class="section-divider">
+              <div class="dot1"></div>
+              <div class="dot2"></div>
+              <div class="dot3"></div>
+            </div> 
+
+   	      <section id="architecture" class="group" data-aos="fade-up" data-aos-duration="600">
+              	<h3>Architecture</h3>
+              	<hr>
+              	<div class="subgroup">
+                <h5 class="citizens-h5">From Raw Minutes to Readable nsights</h5>
+                <p>Here's how raw government data became a civic intelligence tool. A weekly cron job scrapes agendas from San Diego's Hyland Cloud portal, stores them in a database, then sends them through Claude for theme grouping and sentiment analysis before surfacing results in the dashboard.</p>  
+			<div class="arch-flow">
+   				<!-- BOX 1: SOURCE -->
+    				<div class="arch-box source">
+      					<span class="arch-step-label">The Clunky Data</span>
+      					<p class="arch-nickname">San Diego<br>Hyland Cloud</p>
+      					<p class="arch-name">Source</p>
+      					<p class="arch-desc">Hundreds of meeting pages, agendas, PDFs, bureaucratic language — trapped in a legacy portal.</p>
+    				</div>
+    				<!-- CONNECTOR -->
+    				<div class="arch-connector">
+      					<div class="arch-connector-line"></div>
+      					<div class="arch-connector-arrow">→</div>
+      					<p class="arch-connector-label">scrapes</p>
+    				</div>
+    				<!-- BOX 2: PROCESS -->
+    				<div class="arch-box process">
+      					<span class="arch-step-label">The Automation</span>
+     					<p class="arch-nickname">Weekly<br>Scraper</p>
+      					<p class="arch-name">Cron Job + Database</p>
+      					<p class="arch-desc">A scheduled job pulls current meeting minutes and stores them as structured data.</p>
+    				</div>
+    				<!-- CONNECTOR -->
+    				<div class="arch-connector">
+      					<div class="arch-connector-line"></div>
+      					<div class="arch-connector-arrow">→</div>
+      					<p class="arch-connector-label">sends to</p>
+    				</div>
+    				<!-- BOX 3: AI -->
+    				<div class="arch-box ai">
+      					<span class="arch-step-label">The Intelligence Layer</span>
+      					<p class="arch-nickname">Claude 3.5<br>Sonnet</p>
+      					<p class="arch-name">NLP + Sentiment Analysis</p>
+      					<p class="arch-desc">Groups comments into plain-language themes, reads sentiment, and powers the natural language chat interface.</p>
+    				</div>
+    				<!-- CONNECTOR -->
+    				<div class="arch-connector">
+      					<div class="arch-connector-line"></div>
+      					<div class="arch-connector-arrow">→</div>
+      					<p class="arch-connector-label">surfaces</p>
+    				</div>
+				<!-- BOX 4: OUTPUT -->
+    				<div class="arch-box output">
+      					<span class="arch-step-label">The Civic Signal</span>
+      					<p class="arch-nickname">The<br>Dashboard</p>
+      					<p class="arch-name">Frontend + Chat UI</p>
+      					<p class="arch-desc">Theme rankings, sentiment tags, real quotes, and a chat assistant — one page any resident can understand.</p>
+    				</div>
+			</div> 
+			<!-- SYSTEMS THINKER CALLOUT -->
+  			<div class="systems-callout">
+    				<div class="callout-icon">🧠</div>
+    				<div class="callout-text">
+      					<h4>Design Decision: Keep humans in the loop</h4>
+      					<p>Every AI output surfaces its source. The design choice was intentional: AI should boost trust in the data. Residents can always trace a theme back to the person who said it.</p>
+    				</div>
+  			</div>
+		</div> 
+		<div id="data-source" class="subgroup">
+                <h4>Data Sources & Integrity</h4>
+			<p><a href="https://sandiego.hylandcloud.com/211agendaonlinecouncil">San Diego City Council Agendas & Minutes</a></p>
+  			<p>We chose to scrape directly from the Hyland Cloud Portal to ensure the dashboard remains a Primary Source tool. By pointing back to the original source, we maintain the trust required for civic tech.</p>
+	    	</div>
+              </section> 
+
+ 	   
+
+	   <div class="section-divider">
+              <div class="dot1"></div>
+              <div class="dot2"></div>
+              <div class="dot3"></div>
+           </div>  
+
+            <section id="what-i-learned" class="group">
+              <h3>Lessons Learned</h3>
+              <hr> 
+            <div class="subgroup"> 
+	      <h5 class="citizens-h5">Designing for AI: Trust is a UI Requirement</h5>
+	      <p>This was a first-of-its-kind event pairing the Claude developer community with real-life civic challenges. Working directly with the Claude API taught me that designing for AI is different from traditional UI. In order for a resident to trust an AI-generated summary of a city council vote, they need a receipt. In the age of AI, the designer’s primary job is to build the trust chain between the algorithm and the end user.</p>
+<h5 class="citizens-h5">UX as a Bridge, Not Decoration</h5>
+<p>Civic UX means slashing beaurocratic jargon like meeting codes and legal shorthand to create an interface a resident could scan in 60 seconds. Defining users before touching the interface made every design decision faster and more defensible. Every label and CTA had to work for a non-technical resident. Tight constraints reveal what actually matters.</p> 
+<p>This project was a chance to collaborate with San Diego’s vibrant tech community, and I loved the energy of solving high-stakes, local problems alongside people who love this city as much as I do.</p>
+            </div>
+	   </section>
+        </div>
+      </div>
+    </div>
+
+    <a href="" id="template-to-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+
+    <div class="container-fluid">
+      <div class="row footer-row">
+        <div class="footer col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a class="hvr-underline-from-left" href="index.html#my-work" >All</a> / 
+	    <a class="selected-footer" href="model-citizens.html">Model Citizens</a> / 
+	    <a class="hvr-underline-from-left" href="food-waste.html">Food Crusaders</a> /
+            <a class="hvr-underline-from-left" href="audreys-cafe.html">Audrey's Café</a> / 
+	    <a class="hvr-underline-from-left" href="career-fair.html">Career Fair</a> /
+            <a class="hvr-underline-from-left" href="mobile-cards.html">Mobile Cards Redesign</a> / 
+	    <a class="hvr-underline-from-left" href="data-sci.html">Measuring Mental Workload</a>   
+          </p>
+          <br>
+          <br>
+          <p class="footer-text">Designed with ♥</p>
+        </div>
+        <div class="footer-icons col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <p>
+            <a href="mailto:sag009@ucsd.edu" target="_blank"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a>
+          </p>
+          <br>
+          <p class="footer-text-small">&#169; 2025 Sarai Gonzalez</p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+</html>
