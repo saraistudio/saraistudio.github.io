@@ -97,11 +97,6 @@
     gap: 4px;
     padding: 0 8px;
   }
-  .arch-connector-line {
-    width: 32px;
-    height: 1px;
-    background: var(--border);
-  }
   .arch-connector-arrow {
     font-size: 14px;
     color: var(--ink3);
@@ -403,46 +398,39 @@
 			<div class="arch-flow">
    				<!-- BOX 1: SOURCE -->
     				<div class="arch-box source">
-      					<span class="arch-step-label">The Clunky Data</span>
       					<p class="arch-nickname">San Diego<br>Hyland Cloud</p>
       					<p class="arch-name">Source</p>
       					<p class="arch-desc">Hundreds of meeting pages, agendas, PDFs, bureaucratic language trapped in a legacy portal.</p>
     				</div>
     				<!-- CONNECTOR -->
     				<div class="arch-connector">
-      					<div class="arch-connector-line"></div>
       					<div class="arch-connector-arrow">→</div>
       					<p class="arch-connector-label">scrapes</p>
     				</div>
     				<!-- BOX 2: PROCESS -->
     				<div class="arch-box process">
-      					<span class="arch-step-label">The Automation</span>
      					<p class="arch-nickname">Weekly<br>Scraper</p>
       					<p class="arch-name">Cron Job + Database</p>
       					<p class="arch-desc">A scheduled job pulls current meeting minutes and stores them as structured data.</p>
     				</div>
     				<!-- CONNECTOR -->
     				<div class="arch-connector">
-      					<div class="arch-connector-line"></div>
       					<div class="arch-connector-arrow">→</div>
       					<p class="arch-connector-label">sends to</p>
     				</div>
     				<!-- BOX 3: AI -->
     				<div class="arch-box ai">
-      					<span class="arch-step-label">The Intelligence Layer</span>
       					<p class="arch-nickname">Claude 3.5<br>Sonnet</p>
       					<p class="arch-name">NLP + Sentiment Analysis</p>
       					<p class="arch-desc">Groups comments into plain-language themes, reads sentiment, and powers the natural language chat interface.</p>
     				</div>
     				<!-- CONNECTOR -->
     				<div class="arch-connector">
-      					<div class="arch-connector-line"></div>
       					<div class="arch-connector-arrow">→</div>
       					<p class="arch-connector-label">surfaces</p>
     				</div>
 				<!-- BOX 4: OUTPUT -->
     				<div class="arch-box output">
-      					<span class="arch-step-label">The Civic Signal</span>
       					<p class="arch-nickname">The<br>Dashboard</p>
       					<p class="arch-name">Frontend + Chat UI</p>
       					<p class="arch-desc">Theme rankings, sentiment tags, real quotes, and a chat assistant — one page any resident can understand.</p>
