@@ -10,7 +10,7 @@ $(document).ready(function(){
     "I was a Power Ranger for Halloween 4 years straight.", 
     "My dream destinations: New Zealand, Hong Kong, France, and the Isle of Man ✈️", 
     "I am an avid dogwatcher and can identify over 50 breeds 🐕", 
-    "My passion for design comes from my family's legacy: I'm a fourth generation piñata maker 🪅",
+    "I'm a fourth generation piñata maker 🪅",
     "My favorite mediums are paper mâché, wax pastels, gouache, and ink 🎨", 
     "My favorite meal is chiles rellenos.",
     "My favorite writers: Vonnegut, García Márquez, and Murakami 📚",
