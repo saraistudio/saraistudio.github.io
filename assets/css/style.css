@@ -3,6 +3,8 @@
     --secondary-black: #868686;
     --tertiary-black: #aaaaaa;
     --primary-text: #111111;
+    --surface: #FFFFFF;
+    --border: rgba(26,24,20,0.1);
 
 
     --highlight-main: #9EEBCF;
@@ -2099,4 +2101,10 @@ p {
   color: var(--primary-black);
   line-height: 1.6;
   margin: 0;
-}
+} 
+
+/* USER CARDS */
+.users-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 32px; }
+.user-card { padding: 20px; border: 0.5px solid var(--border); border-radius: 12px; background: var(--surface); }
+.user-role { font-family: 'Circular Std Black', sans-serif !important; font-size: 13px; font-weight: 500 !important; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.3px; }
+.user-need { font-family: 'Fakt', sans-serif; font-size: 13px; color: var(--ink2); line-height: 1.5; }
