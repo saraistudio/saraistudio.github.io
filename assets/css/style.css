@@ -2107,4 +2107,8 @@ p {
 .users-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 32px; }
 .user-card { padding: 20px; border: 0.5px solid var(--border); border-radius: 12px; background: var(--surface); }
 .user-role { font-family: 'Circular Std Black', sans-serif !important; font-size: 13px; font-weight: 500 !important; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.3px; }
-.user-need { font-family: 'Fakt', sans-serif; font-size: 13px; color: var(--ink2); line-height: 1.5; }
+.user-need { font-family: 'Fakt', sans-serif; font-size: 13px; color: var(--ink2); line-height: 1.5; } 
+
+.zoom-img {
+  border-radius: 0 !important;
+}
