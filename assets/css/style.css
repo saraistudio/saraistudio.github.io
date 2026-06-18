@@ -23,6 +23,7 @@
     --highlight-model-citizens: #995C8F40;
 
     --citizens-color:#995C8F;
+    --birthmom-color:#90CBC4;
     --yellow-color:#F9CB42;
     --sky-blue-color:#5AD1FF;
     --about-color: #44DCC4;
@@ -625,6 +626,11 @@ hr {
 
 .citizens-h5 {
   border-left: 6px solid var(--citizens-color);
+  padding-left: 28px;
+}
+ 
+.birthmom-h5 {
+  border-left: 6px solid var(--birthmom-color);
   padding-left: 28px;
 }
 
@@ -2112,3 +2118,4 @@ p {
 .zoom-img {
   border-radius: 0 !important;
 }
+
