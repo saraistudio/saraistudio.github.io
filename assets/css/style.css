@@ -21,6 +21,7 @@
     --highlight-mobile-cards: #92AEEF40; 
     --highlight-career-fair: #68AACC40;
     --highlight-model-citizens: #995C8F40;
+    --highlight-birthmom: #90CBC460;
 
     --citizens-color:#995C8F;
     --birthmom-color:#90CBC4;
@@ -600,6 +601,13 @@ hr {
 }
 .highlight-model-citizens.shown {
   background-image: linear-gradient(to right, transparent 50%, var(--highlight-model-citizens) 50%);
+}
+.highlight-birthmom {
+  background-image: linear-gradient(to right, transparent 50%, var(--highlight-birthmom) 50%);
+}
+
+.highlight-birthmom.shown {
+  background-image: linear-gradient(to right, transparent 50%, var(--highlight-birthmom) 50%);
 }
 .highlight-link {
   position: relative;
