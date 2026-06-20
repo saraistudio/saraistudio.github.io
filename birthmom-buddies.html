@@ -13,6 +13,7 @@
 	</script> 
 <style> 
 :root {
+    --birthmom-color: #90CBC4
     --accent: #1D4ED8;
     --accent-light: #EFF6FF;
     --ink3: #9C9890;
@@ -58,6 +59,39 @@
     line-height: 1.6;
   }
 
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 15px;
+}
+
+.comp-table th,
+.comp-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+.comp-table th {
+  background: rgba(144, 203, 196, 0.35);
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.comp-table th:first-child {
+  background: transparent;
+  border: none;
+}
+
+.comp-table td:first-child {
+  color: var(--primary-text);
+  background: var(--surface);
+}
+
+.comp-table tbody tr:nth-child(even) td {
+  background: rgba(144, 203, 196, 0.15);
+}
 </style>
 <title>Birthmom Buddies ❘ Sarai Gonzalez</title>
 <meta charset="utf-8">
@@ -223,7 +257,31 @@
               </div>
      	      <div id="compete" class="subgroup">
 		<h4>Competitive Analysis</h4> 
-		<p>Since we were building from scratch, I conducted a competitive analysis of similar nonprofit websites to identify best practices. Organizations that lead with people before programs build trust faster than those with a list-heavy service page. Working with our Digital Marketer, I structured the Homepage and About page around the founder's story and warm, human-first storytelling.</p>
+		<p>Since we were building from scratch, I conducted a competitive analysis of similar nonprofit websites to identify best practices. BraveLove's stigma-reframing tone stood out as an application of trauma-informed design — validating a birth mother's choice rather than letting shame go unaddressed. Organizations that lead with people before programs build trust faster than those with a list-heavy service page. Working with our Digital Marketer, I structured the Homepage and About page around the founder's story and warm, human-first storytelling.</p>
+				<table class="comp-table">
+  					<thead>
+    						<tr>
+      							<th></th>
+      							<th>American Heart Association</th>
+      							<th>Feeding America</th>
+      							<th>BraveLove</th>
+    						</tr>
+  					</thead>
+  					<tbody>
+    						<tr>
+      							<td><strong>Tone</strong></td>
+      							<td>Clinical, stat-heavy</td>
+      							<td>Warm, narrative-driven</td>
+      							<td>Personal, stigma-reframing</td>
+    						</tr>
+    						<tr>
+      							<td><strong>What we borrowed</strong></td>
+      							<td>Four-column service layout</td>
+      							<td>Story-first homepage structure</td>
+      							<td>Reframing adoption before introducing programs</td>
+    						</tr>
+  					</tbody>
+				</table>
 				<div class="row">
   					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
     						<img class="comp-img" src="images/heart-association.png" alt="American Heart Association">
