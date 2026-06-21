@@ -11,6 +11,66 @@
 
 	  gtag('config', 'G-4SBXGLGZKE');
 	</script> 
+<style>
+:root {
+    --audreys-color: #E8B465;
+    --accent: #1D4ED8;
+    --accent-light: #EFF6FF;
+    --ink3: #9C9890;
+    --surface: #FFFFFF;
+    --surface2: #F0EDE6;
+    --gold-light: #FAEEDA;
+    --border: rgba(26,24,20,0.1);
+  } 
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 15px;
+}
+
+.comp-table th,
+.comp-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+.comp-table th {
+  background: rgba(232, 180, 101, 0.60);
+  color: var(--primary-text);
+  font-weight: 600;
+}
+
+.comp-table th:first-child {
+  background: transparent;
+  border: none;
+}
+
+.comp-table td:first-child {
+  color: var(--primary-text);
+  background: var(--surface);
+}
+
+.comp-table tr.takeaway td {
+  background: rgba(232, 180, 101, 0.35);
+  font-weight: 500;
+}
+
+.comp-table .dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.comp-table .dot.red { background-color: #e0413e; }
+.comp-table .dot.yellow { background-color: #f2b73f; }
+.comp-table .dot.green { background-color: #2e8b57; }
+</style>
 <title>Audrey's Café ❘ Sarai Gonzalez</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scalable=false;">
@@ -71,7 +131,7 @@
       <div class="collapse navbar-collapse navbar-right" id="collapsible-nav">
         <ul class="nav navbar-nav">
           <li><a class="selected hvr-underline-from-left" href="index.html#my-work">Projects</a></li>
-          <li><a class="hvr-underline-from-left" href="https://drive.google.com/file/d/18i8dNrxsKNWhALma6WHFcPcNQQNlRfaq/view?usp=sharing" target="_blank">CV</a></li>
+          <li><a class="hvr-underline-from-left" href="https://drive.google.com/file/d/1zfu_kYayNMbLoBsyld5feaFiOlhlU-mM/view?usp=sharing" target="_blank">CV</a></li>
           <li><a class="hvr-underline-from-left" href="about.html">About</a></li>
         </ul>
       </div>
@@ -209,7 +269,47 @@
               </div>
 	      <div id="compete" class="subgroup">
 		<h4>Competitive Analysis</h4> 
-		<p>Since I didn't have an existing design to improve upon, I referenced three local websites: Heartwork Coffee, Arandas Café, and Bird Rock Coffee Roasters. I paid close attention to site architecture, usability, and visual design especially for the mobile versions. 2 out of 3 competitors buried their business hours. For a café that lives and dies by Finals week foot traffic, this was non-negotiable. Every red zone in my feature comparison became a design requirement for Audrey's—and a mistake to actively avoid.</p>  
+		<p>Since I didn't have an existing design to improve upon, I referenced three local websites: Heartwork Coffee, Arandas Café, and Bird Rock Coffee Roasters. I paid close attention to site architecture, usability, and visual design especially for the mobile versions. Every red zone in my analysis became a design requirement for Audrey's—and a mistake to actively avoid. Aranda's accessibility widget let users select accommodations for specific conditions like dyslexia or color blindness, a feature I hadn't seen on any other café site.</p>  
+				<table class="comp-table">
+  					<thead>
+    						<tr>
+      							<th></th>
+      							<th>Heartwork Coffee</th>
+      							<th>Aranda's Café</th>
+      							<th>Bird Rock Coffee</th>
+    						</tr>
+  					</thead>
+  					<tbody>
+    						<tr>
+      							<td><strong>Menu Scannability</strong></td>
+      							<td><span class="dot red"></span> No menu shown on homepage</td>
+      							<td><span class="dot yellow"></span> Categorized, but generic</td>
+      							<td><span class="dot green"></span> Clean grid layout</td>
+    						</tr>
+    						<tr>
+      							<td><strong>Mobile Design</strong></td>
+      							<td><span class="dot red"></span> Image-heavy</td>
+      							<td><span class="dot yellow"></span> Functional but dense</td>
+      							<td><span class="dot yellow"></span> Crowded navigation</td>
+    						</tr>
+    						<tr>
+      							<td><strong>Catering Visibility</strong></td>
+      							<td><span class="dot red"></span> Not offered</td>
+      							<td><span class="dot red"></span> Not offered</td>
+      							<td><span class="dot green"></span> Listed in main nav</td>
+   			 			</tr>
+						<tr>
+  							<td><strong>Accessibility</strong></td>
+  							<td><span class="dot red"></span> Low-contrast text over photos</td>
+  							<td><span class="dot green"></span> Customizable widget (screen reader, text size, contrast) & statement</td>
+  							<td><span class="dot red"></span> Low-contrast text in hero & banners</td>
+							</tr>
+    						<tr class="takeaway">
+      							<td><strong>Design Takeaway</strong></td>
+      							<td colspan="3">No competitor combined a scannable menu, mobile-first layout, and visible catering. However, Aranda's set the standard for accessibility with its condition-specific widget and published statement.</td>
+    						</tr>
+  					</tbody>
+				</table>
 				<div class="row">
   					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
     						<img class="comp-img" data-action="zoom" src="images/heartwork.png" alt="Heartwork Coffee Bar">
@@ -224,7 +324,6 @@
     						<p class="img-caption">Bird Rock Coffee Roasters</p>
   					</div>
 				</div>
-		<img class="img-responsive full-img" src="images/comp-analysis.png" alt="competitive analysis"> 
 		</div>
             </section>
             <div class="section-divider">
@@ -242,13 +341,13 @@
 		</div> 
 	      <div id="style-guide" class="subgroup">
               	<h4>Style Guide</h4> 
-                 	<p><span class="highlight highlight-audreys">Every design decision was a balancing act between the university's brand, WCAG accessibility standards, and the manager's Dr. Seuss vision.</span> Audrey's orange failed accessibility standards so it couldn't be used for text, buttons, or backgrounds. I fixed this issue by introducing UCSD's yellow and navy into the color palette, which satisfied both the brand guidelines and the accessibility requirements while keeping the warm, playful feel the manager wanted.</p>
+                 	<p>I created a style guide using UCSD's design system to create consistency. <span class="highlight highlight-audreys">Every design decision was a balancing act between the university's brand, WCAG accessibility standards, and the manager's Dr. Seuss vision.</span> Audrey's orange failed accessibility standards so it couldn't be used for text, buttons, or backgrounds. I fixed this issue by introducing UCSD's yellow and navy into the color palette, which satisfied both the brand guidelines and the accessibility requirements while keeping the warm, playful feel the manager wanted.</p>
 			<div class="row">
   				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
     					<img class="img-responsive full-img" src="images/style-guide-text.webp" alt="typography style guide">
   				</div>
   				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-    					<img class="img-responsive full-img" src="images/style-guide-colors.webp" alt="color style guide">
+    					<img class="img-responsive full-img" data-action="zoom" src="images/style-guide-colors.svg" alt="color style guide">
   				</div>
 			</div>
 			<p>To make sure content layout was standardized across all screens, I created a grid system. Everything from font size, line height to padding is a value divisible by 4.</p> 
