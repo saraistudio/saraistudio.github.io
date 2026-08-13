@@ -1187,7 +1187,7 @@ i {
     font-family: 'Circular Std Black' !important;
     font-size: 28px;
     color: var(--primary-black);
-    text-align: center;
+    text-align: left;
   }
 
   /* Portfolio Cards Medium Screen */
@@ -1633,7 +1633,7 @@ i {
     font-family: 'Circular Std Black' !important;
     font-size: 24px;
     color: var(--primary-black);
-    text-align: center;
+    text-align: left;
   }
 
   /* Portfolio Cards Medium Screen */
