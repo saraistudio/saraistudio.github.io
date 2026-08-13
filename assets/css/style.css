@@ -1045,7 +1045,25 @@ i {
     color: var(--tertiary-black);
     margin-bottom: 20px;
   }
+	
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 12px;
+  }
 
+  .tag {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #666;
+    background: #F0F0F0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
   .card-content {
     font-family: 'Fakt', sans-serif;
     font-weight: 200;
