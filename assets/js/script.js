@@ -1,4 +1,8 @@
-  // $('#template-to-top').setAttribute("data-aos","fade-up");
+$(document).ready(function(){
+
+  const mq = window.matchMedia( "(min-width: 991px)" );
+
+// $('#template-to-top').setAttribute("data-aos","fade-up");
   // $('#template-to-top').setAttribute("data-aos-duration","600");
 
 
