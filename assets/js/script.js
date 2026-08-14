@@ -1,31 +1,3 @@
-$(document).ready(function(){
-
-  const mq = window.matchMedia( "(min-width: 991px)" );
-  const funFacts = [
-    "I took Surf P.E. in high school and got stung by a stingray on day one 🏄‍♀️", 
-    "As a CogSci major, I've dissected sheep, rat, and monkey brains 🧠", 
-    "I speak English, Spanish, and Japanese.", 
-    "I snorkeled in Molokini Crater alongside barracudas and sea turtles.",
-    "I'm addicted to Sudoku. I'm even programming my own puzzle generator in C.",  
-    "My dream destinations: New Zealand, Hong Kong, France, and the Isle of Man ✈️", 
-    "I am an avid dogwatcher and can identify over 50 breeds 🐕", 
-    "I'm a fourth generation piñata maker 🪅",
-    "My favorite mediums are paper mâché, wax pastels, gouache, and ink 🎨", 
-    "My favorite meal is chiles rellenos.",
-    "My favorite writers: Vonnegut, García Márquez, and Murakami 📚",
-    "I won 3rd place in my Japanese class's bento box competition — I made a sleeping Totoro 🎉", 
-    "I love puzzles: jigsaw, Wordle, N-Queens, Sudoku, etc. It's good brain juice!",
-    "I'm an amateur cryptozoologist — I've hunted Bigfoot, El Chupacabra, and the Mothman 👣",
-    "Super Mario and Castlevania were the video games that defined my childhood.", 
-    "I've been making zines for over 10 years now.",
-    "I'm a Seinfeld fanatic. I even started a club during my freshman year of college. Serenity now!",
-    "My favorite movie directors include David Lynch and Stanley Kubrick 🎬",
-  ];
-
-  var randomFactIndex = Math.floor(Math.random() * funFacts.length);
-  $('#preloader-title').text("Sarai's Fun Fact #"+(randomFactIndex+1));
-  $('#preloader-content').html(funFacts[randomFactIndex]);
-
   // $('#template-to-top').setAttribute("data-aos","fade-up");
   // $('#template-to-top').setAttribute("data-aos-duration","600");
 
