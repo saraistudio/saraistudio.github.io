@@ -2134,7 +2134,6 @@ p {
 } 
 
 .interview-quotes {
-  max-width: 70%;
   margin: 0 auto 32px auto;
 }
 
@@ -2154,7 +2153,6 @@ p {
   font-family: 'Circular Std Medium', sans-serif;
   font-size: 48px;
   color: var(--sky-blue-color);
-  opacity: 0.8;
   line-height: 1;
 }
 
