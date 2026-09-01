@@ -2151,7 +2151,7 @@ p {
   left: -8px;
   top: -8px;
   font-family: 'Circular Std Medium', sans-serif;
-  font-size: 48px;
+  font-size: 5rem;
   color: var(--sky-blue-color);
   line-height: 1;
 }
