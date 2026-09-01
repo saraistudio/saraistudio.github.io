@@ -2113,7 +2113,7 @@ p {
 .next-steps-num {
   font-family: 'Circular Std Medium', sans-serif;
   font-size: 24px;
-  color: #995C8F;
+  color: var(--sky-blue-color);
   line-height: 1;
   flex-shrink: 0;
 }
