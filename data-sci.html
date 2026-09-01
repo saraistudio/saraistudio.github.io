@@ -98,18 +98,18 @@
             <h3>Overview</h3> 
 	    <hr>
             <div class="subgroup">
-		<p>Can your smartwatch tell when you're burned out? I tackled this question during 2025 UC Love Data Week, an event focused on discovering, managing, and sharing data. <span class="highlight highlight-data">Using R, I examined potential correlations between physiological metrics and mental workload among 20 subjects. I found a significant relationship between heart rate and NASA-TLX scores.</span> Thanks to affordable wearable tech making massive amounts of real-time biological data available to everyone, my work can be used to improve workplace health and safety in the digital age.</p>
+		<p>Can your smartwatch tell when you're burned out? I tackled this question during 2025 UC Love Data Week, an event focused on discovering, managing, and sharing data. <span class="highlight highlight-sky-blue">Using R, I examined potential correlations between physiological metrics and mental workload among 20 subjects. I found a significant relationship between heart rate and NASA-TLX scores.</span> Thanks to affordable wearable tech making massive amounts of real-time biological data available to everyone, my work can be used to improve workplace health and safety in the digital age.</p>
 	    </div>
             <div id="intro" class="subgroup">
               <h4>Introduction</h4>
-              <p>Mental workload (MWL) characterises an individual’s level of cognitive engagement and effort while performing tasks. As task demand increases, human performance declines. <span class="highlight highlight-data">Research shows higher MWL causes increased fatigue, injury, errors and accidents.</span> Mental workload plays a crucial role across different industries, especially in labor-intensive and safety-critical spaces.</p>
-<p>Repeated measures correlation (rmcorr) has several advantages over other techniques: it can handle repeated measures data without averaging it. It's helpful for studying how a variable changes within a person over time.  <span class="highlight highlight-data">By calculating the rmcorr coefficient (rrm), we can examine how an individual’s physiology shifts with their mental effort, providing a high-resolution map of human performance under pressure.</span></p>
+              <p>Mental workload (MWL) characterises an individual’s level of cognitive engagement and effort while performing tasks. As task demand increases, human performance declines. <span class="highlight highlight-sky-blue">Research shows higher MWL causes increased fatigue, injury, errors and accidents.</span> Mental workload plays a crucial role across different industries, especially in labor-intensive and safety-critical spaces.</p>
+<p>Repeated measures correlation (rmcorr) has several advantages over other techniques: it can handle repeated measures data without averaging it. It's helpful for studying how a variable changes within a person over time.  <span class="highlight highlight-sky-blue">By calculating the rmcorr coefficient (rrm), we can examine how an individual’s physiology shifts with their mental effort, providing a high-resolution map of human performance under pressure.</span></p>
             </div>
 
             <div class="row">
               <div  class="subgroup-left-side col-lg-8 col-md-8 col-sm-12 col-xs-12">
                   <h4 id="dataset">The Dataset</h4>
-                  <p>The dataset is from an experiment (Izzah et al., 2022) exploring machine learning models. 30 subjects completed two cognitive tests (d2 Attention Test and Switcher Featuring Task) during which their Heart Rate Variability (HRV) was monitored as a physiological indicator of mental workload. <span class="highlight highlight-data">This analysis uses unpublished NASA Task Load Index (TLX) scores, a self-reported measure of perceived mental workload.</span> Higher scores reflect higher engagement of mental workload in each task.</p>
+                  <p>The dataset is from an experiment (Izzah et al., 2022) exploring machine learning models. 30 subjects completed two cognitive tests (d2 Attention Test and Switcher Featuring Task) during which their Heart Rate Variability (HRV) was monitored as a physiological indicator of mental workload. <span class="highlight highlight-sky-blue">This analysis uses unpublished NASA Task Load Index (TLX) scores, a self-reported measure of perceived mental workload.</span> Higher scores reflect higher engagement of mental workload in each task.</p>
               </div>
               <div class="subgroup-right-side col-lg-4 col-md-4 col-sm-12 col-xs-12"> 
 		<h4>Role</h4> 
@@ -158,12 +158,12 @@
               <h3>Analysis & Results</h3>
               <hr> 
             <div class="subgroup"> 
-		<h5 class="data-sci-h5">Finding 1: Heart Rate Correlates with Mental Workload</h5>
-	      <p><span class="highlight highlight-data">A positive intra-individual correlation indicated a significant relationship between heart rate and NASA-TLX scores (rrm (19) = 0.48, 95% CI [0.06, 0.755], p = 0.028) across two different mental workload tests, leading to the rejection of the first null hypothesis. This suggests that higher mental workload was associated with increased heart rate.</span></p> 
+		<h5 class="sky-blue-h5">Finding 1: Heart Rate Correlates with Mental Workload</h5>
+	      <p><span class="highlight highlight-sky-blue">A positive intra-individual correlation indicated a significant relationship between heart rate and NASA-TLX scores (rrm (19) = 0.48, 95% CI [0.06, 0.755], p = 0.028) across two different mental workload tests, leading to the rejection of the first null hypothesis. This suggests that higher mental workload was associated with increased heart rate.</span></p> 
 	      <img class="img-responsive full-screen-img" src="images/Final-Plot-HR.webp" alt="graph"><br><br> 
 		<p class="img-caption">Each participant’s data is color-coded with lines representing the rmcorr fit for each individual.</p>
-	<h5 class="data-sci-h5">Finding 2: LF/HF Ratio is an Unreliable Metric</h5> 
-	      <p>In contrast, this evidence was insufficient to reject H02 for a significant correlation between the LF to HF ratio and NASA-TLX scores (rrm (19) = 0.34, 95% CI [-0.106, 0.674], p = 0.13). <span class="highlight highlight-data">For real-time workload monitoring, heart rate may be a more dependable metric than noisy ratios like LF/HF, which showed higher variability among our 20 subjects.</span></p> 
+	<h5 class="sky-blue-h5">Finding 2: LF/HF Ratio is an Unreliable Metric</h5> 
+	      <p>In contrast, this evidence was insufficient to reject H02 for a significant correlation between the LF to HF ratio and NASA-TLX scores (rrm (19) = 0.34, 95% CI [-0.106, 0.674], p = 0.13). <span class="highlight highlight-sky-blue">For real-time workload monitoring, heart rate may be a more dependable metric than noisy ratios like LF/HF, which showed higher variability among our 20 subjects.</span></p> 
               <img class="img-responsive full-screen-img" src="images/Final-Plot-LFHF.webp" alt="graph"><br><br> 
 		<p>Heart rate emerged as the stronger physiological signal. Ultimately, this underscores the potential of integrating wearable tech into modern workload assessment frameworks.</p> 
 <p class="p-center-wrapper"><button data-toggle="collapse" data-target="#interview-details" class="btn black-button" name="button">View Code</button></p>
@@ -287,7 +287,7 @@ ggplot(data_clean, aes(x = lfhf, y = nasa,   group = factor(participant), color 
               <h3>Lessons Learned</h3>
               <hr> 
             <div class="subgroup"> 
-			  <h5 class="data-sci-h5">Insights Don't Speak for Themselves</h5>
+			  <h5 class="sky-blue-h5">Insights Don't Speak for Themselves</h5>
 	          <p>Data is a storytelling tool but scientists often forget the final stage of the scientific process: communicating results. An analysis is only as good as its explanation, and you can't assume your audience shares your background knowledge. To help others build a good mental model of the data, you need to invest time in making your plots as clear as possible. For those that want to learn more about data science, I highly recommend UC Love Data Week. I learned so much and look forward to next year's event!</p>
             </div>
 	   </section> 
