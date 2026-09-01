@@ -2133,6 +2133,47 @@ p {
   margin: 0;
 } 
 
+.interview-quotes {
+  max-width: 70%;
+  margin: 0 auto 32px auto;
+}
+
+.interview-quotes blockquote {
+  margin: 0 0 32px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.interview-quotes blockquote::before {
+  content: '\201C';
+  position: absolute;
+  left: -8px;
+  top: -8px;
+  font-family: 'Circular Std Medium', sans-serif;
+  font-size: 48px;
+  color: var(--sky-blue-color);
+  opacity: 0.4;
+  line-height: 1;
+}
+
+.interview-quotes blockquote p {
+  font-family: 'Fakt', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 24px;
+  color: var(--primary-black);
+  margin: 0 0 8px 0 !important;
+}
+
+.interview-quotes cite {
+  font-family: 'Fakt', sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--secondary-black);
+  display: block;
+  text-align: right;
+  font-style: normal;
+}
 /* USER CARDS */
 .users-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 32px; }
 .user-card { padding: 20px; border: 0.5px solid var(--border); border-radius: 12px; background: var(--surface); }
