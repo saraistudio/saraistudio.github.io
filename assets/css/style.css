@@ -2148,10 +2148,10 @@ p {
 .interview-quotes blockquote::before {
   content: '\201C';
   position: absolute;
-  left: -8px;
-  top: -8px;
+  left: -20px; /* originally -8px */
+  top: -30px; /* originally -8px */
   font-family: 'Circular Std Medium', sans-serif;
-  font-size: 120px; /* originally 50px */
+  font-size: 100px; /* originally 50px */
   color: var(--sky-blue-color);
   line-height: 1;
 }
